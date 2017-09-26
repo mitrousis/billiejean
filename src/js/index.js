@@ -1,10 +1,17 @@
 const $ = require('jquery')
-const LightedTile = require('./src/LightedTile')
+const TileController = require('./src/TileController')
+const AudioPlayer    = require('./src/AudioPlayer')
 
 require('../css/reset.css')
 require('../css/main.css')
 
 $(document).ready(() => {
-  let lt = new LightedTile(100, 100, 20)
+
+  let tc = new TileController()
+
+  window.Application = {}
+  window.Application.audioPlayer = new AudioPlayer()
 })
+
+
 
